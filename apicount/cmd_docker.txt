@@ -1,0 +1,8 @@
+docker build -t apicount . 	// build une image docker
+docker run -d -p 15400:15400 apicount 		//run l'image docker sur le port 15400
+
+docker pull redis		//pull redis
+docker run --name some-redis -d redis 		// run redis
+docker run --name some-redis -d redis redis-server --save 60 1 --loglevel warning		//run redis de façon persistante
+
+docker network create some-network

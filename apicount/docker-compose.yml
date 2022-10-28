@@ -1,0 +1,13 @@
+version: '3'
+services:
+    redis:
+      image: redis
+      ports:
+          - 6379
+    core_api:
+      build: .
+      container_name: "streamlit-container3"
+      ports:
+          - "15400:15400"
+      volumes:
+          - ./app/:/app
